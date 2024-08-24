@@ -4,14 +4,19 @@ import { LoginComponent } from './login.component';
 import { LOGIN_ROUTES } from './login.routing';
 import { RouterModule } from '@angular/router';
 import { SharedModule } from 'src/app/shared/shared.module';
-import { ButtonComponent } from 'src/app/shared/components/button/button.component';
+import { FormsModule } from '@angular/forms';
+import { MatFormField } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
 
 @NgModule({
   declarations: [LoginComponent],
   imports: [
     CommonModule,
     RouterModule.forChild(LOGIN_ROUTES),
-    SharedModule
+    SharedModule,
+    FormsModule,
+    MatInputModule
+
   ],
   exports: [LoginComponent],
 })

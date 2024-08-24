@@ -1,1 +1,39 @@
-<app-input [labelText]="'Label'" [type]="'asdf'" ></app-input>
+<div class="container">
+  <div class="left">
+    <div class="content">
+      <img src="../../../assets/images/logo-navega.png" width="40%" />
+
+      <div>
+        <span class="tittle">Boas-vindas ao Portal!</span>
+        <span class="tittle"> Para começar, qual seu email ou CPF?</span>
+        <span class="tittle-sub"
+          >Precisamos desta confirmação para dar início ao seu acesso.</span
+        >
+      </div>
+
+      <div class="login-form">
+        <mat-form-field>
+          <mat-label>Email ou CPF</mat-label>
+          <input matInput />
+        </mat-form-field>
+
+        <mat-form-field>
+          <mat-label>Password</mat-label>
+          <input matInput type="password" />
+        </mat-form-field>
+      </div>
+    </div>
+
+    <app-button
+      [textContent]="'acessar'"
+      [class]="'btn btn-primary'"
+    ></app-button>
+
+    <span class="tittle tittle-sub">Esqueceu a senha? <a >Acesse aqui</a></span>
+    <span class="tittle tittle-sub">Versão </span>
+  </div>
+
+  <div class="right">
+    <!-- A imagem será definida como background via CSS -->
+  </div>
+</div>
