@@ -18,15 +18,7 @@
     border: none;
 
     &:hover {
-      background-color: #{$color-primary};
-    }
-
-    &:focus {
-      background-color: #{$color-primary};
-    }
-
-    &:active {
-      background-color: #{$color-primary};
+      background-color: #{$color-secondary};
     }
 
     &:disabled {

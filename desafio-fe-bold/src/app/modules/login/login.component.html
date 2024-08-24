@@ -14,23 +14,31 @@
       <div class="login-form">
         <mat-form-field>
           <mat-label>Email ou CPF</mat-label>
-          <input matInput />
+          <div class="submit-line">
+            <input matInput />
+            <img class="submit-icon" src="./../../../assets/images/check.svg" />
+          </div>
         </mat-form-field>
 
         <mat-form-field>
           <mat-label>Password</mat-label>
-          <input matInput type="password" />
+          <div class="submit-line">
+            <input matInput type="password" />
+            <img class="submit-icon" src="./../../../assets/images/check.svg" />
+          </div>
         </mat-form-field>
       </div>
+
+      <app-button
+        [textContent]="'acessar'"
+        [class]="'btn btn-primary'"
+      ></app-button>
+
+      <span class="tittle tittle-sub"
+        >Esqueceu a senha? <a>Acesse aqui</a></span
+      >
+      <span class="tittle tittle-sub">Versão {{ version }} </span>
     </div>
-
-    <app-button
-      [textContent]="'acessar'"
-      [class]="'btn btn-primary'"
-    ></app-button>
-
-    <span class="tittle tittle-sub">Esqueceu a senha? <a >Acesse aqui</a></span>
-    <span class="tittle tittle-sub">Versão </span>
   </div>
 
   <div class="right">

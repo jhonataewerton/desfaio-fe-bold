@@ -77,6 +77,18 @@ a {
   cursor: pointer;
 }
 
+.submit-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 10;
+  color: blue !important;
+}
+
+.submit-line {
+  position: relative;
+}
+
 ::ng-deep .mdc-text-field--filled:not(.mdc-text-field--disabled) {
   background-color: transparent !important;
 }
@@ -101,4 +113,17 @@ a {
 
 ::ng-deep .mdc-text-field {
   padding: 0 !important;
+}
+
+@media (max-width: 768px) {
+  .left {
+    width: 100%;
+    background-color: #f4f4f4;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  .right {
+    display: none;
+  }
 }
