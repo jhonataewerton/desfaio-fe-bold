@@ -1,0 +1,38 @@
+@import "./../../variables.scss";
+
+.btn {
+  width: 272px;
+  height: 40px;
+  padding: 8px 16px 8px 16px;
+  border-radius: 4px;
+  border: none;
+  font-family: #{$font-family-base};
+  font-size: #{$font-size-base};
+  font-weight: 700;
+  text-transform: uppercase;
+  cursor: pointer;
+
+
+
+  &-primary {
+    background-color: #{$color-primary};
+    color: #f5f5f5;
+    border: none;
+
+    &:hover {
+      background-color: #{$color-primary};
+    }
+
+    &:focus {
+      background-color: #{$color-primary};
+    }
+
+    &:active {
+      background-color: #{$color-primary};
+    }
+
+    &:disabled {
+      color: gray
+    }
+  }
+}
