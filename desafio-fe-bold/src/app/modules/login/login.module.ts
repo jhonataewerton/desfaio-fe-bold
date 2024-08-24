@@ -4,7 +4,7 @@ import { LoginComponent } from './login.component';
 import { LOGIN_ROUTES } from './login.routing';
 import { RouterModule } from '@angular/router';
 import { SharedModule } from 'src/app/shared/shared.module';
-import { ButtonComponent } from 'src/app/shared/button/button.component';
+import { ButtonComponent } from 'src/app/shared/components/button/button.component';
 
 @NgModule({
   declarations: [LoginComponent],
