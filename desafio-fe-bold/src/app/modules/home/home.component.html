@@ -25,24 +25,31 @@
 
     <div class="right">
       <div class="columns">
-        <div class="right-bottom">
-          <img src="../../../assets/images/img teste.png" />
+        <div class="chart">
+          <span class="tittle-sub">Total em contribuições</span>
+          <span class="tittle">R$ 600,00</span>
+
+          <canvas id="MyChart" style="padding: 20px">{{ chart }}</canvas>
         </div>
 
-        <div class="card-list">
-          <hr />
-          <app-card
-            *ngFor="let card of mockCardContent"
-            [mockCardContent]="card"
-            style="margin: 20px"
-          ></app-card>
+        <div class="right-bottom">
+          <div class="card-list">
+            <hr />
+            <app-card
+              *ngFor="let card of mockCardContent"
+              [mockCardContent]="card"
+              style="margin: 20px"
+            ></app-card>
+          </div>
+          <div class="btn">
+            <app-button
+              [textContent]="'INCLUIR CONTRIBUIÇÃO'"
+              [class]="'btn btn-primary'"
+              style="text-align: -webkit-center"
+            ></app-button>
+          </div>
         </div>
       </div>
-
-      <app-button
-        [textContent]="'INCLUIR CONTRIBUIÇÃO'"
-        [class]="'btn btn-primary'"
-      ></app-button>
     </div>
   </div>
 </div>

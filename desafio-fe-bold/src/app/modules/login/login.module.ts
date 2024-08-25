@@ -5,7 +5,6 @@ import { LOGIN_ROUTES } from './login.routing';
 import { RouterModule } from '@angular/router';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { FormsModule } from '@angular/forms';
-import { MatFormField } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 
 @NgModule({

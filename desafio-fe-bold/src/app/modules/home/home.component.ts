@@ -1,14 +1,40 @@
+import { Chart, registerables } from 'chart.js';
 import { Component } from '@angular/core';
 import { Card } from 'src/app/shared/components/card/card.model';
-import { CardContent } from 'src/app/shared/components/card/cardContent.model';
 import { MenuList } from 'src/app/shared/components/menu-list/menuList.model';
+
+import { OnInit } from '@angular/core';
+
+Chart.register(...registerables);
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
 })
-export class HomeComponent {
+export class HomeComponent implements OnInit {
+  public config: any = {
+    type: 'doughnut',
+    options: {
+      plugins: {
+        legend: {
+          display: true,
+          position: 'bottom',
+        },
+      },
+    },
+    data: {
+      labels: ['Contribuição voluntária', 'Contribuição mensal'],
+      datasets: [
+        {
+          label: 'My First Dataset',
+          data: [499.999, 200.0],
+          backgroundColor: ['rgb(89,76,190)', 'rgb(226,46,111)'],
+          hoverOffset: 4,
+        },
+      ],
+    },
+  };
   mockMenu: MenuList[] = [
     { firstSvgUrl: 'money', textContent: 'Ver Extrato' },
     { firstSvgUrl: 'cont-mensal', textContent: 'Contribuição Mensal' },
@@ -32,4 +58,10 @@ export class HomeComponent {
       cardContent: [{ textDescription: 'Valor da contribuição', value: '5%' }],
     },
   ];
+
+  chart: any;
+
+  ngOnInit(): void {
+    this.chart = new Chart('MyChart', this.config);
+  }
 }

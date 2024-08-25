@@ -7,11 +7,7 @@ import { SharedModule } from 'src/app/shared/shared.module';
 
 @NgModule({
   declarations: [HomeComponent],
-  imports: [
-    CommonModule,
-    RouterModule.forChild(HOME_ROUTES),
-    SharedModule
-  ],
-  exports: [HomeComponent]
+  imports: [CommonModule, RouterModule.forChild(HOME_ROUTES), SharedModule],
+  exports: [HomeComponent],
 })
 export class HomeModule {}
