@@ -6,10 +6,11 @@ import { InputComponent } from './components/input/input.component';
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
+import { MenuListComponent } from './components/menu-list/menu-list.component';
 
 @NgModule({
-  declarations: [ButtonComponent, InputComponent],
+  declarations: [ButtonComponent, InputComponent, MenuListComponent],
   imports: [CommonModule, ReactiveFormsModule, FormsModule, MatInputModule, HttpClientModule],
-  exports: [ButtonComponent, InputComponent],
+  exports: [ButtonComponent, InputComponent, MenuListComponent],
 })
 export class SharedModule {}

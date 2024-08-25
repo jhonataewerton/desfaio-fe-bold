@@ -1,1 +1,19 @@
-<p>home works!</p>
+<div class="container">
+  <div class="navs">asdfasdfasdf</div>
+  <div class="content">
+    <div class="left">
+      <app-menu-list
+        *ngFor="let menu of mockMenu"
+        firstSvgUrl="{{ menu.firstSvgUrl }}"
+        menuName="{{ menu.textContent }}"
+      >
+      </app-menu-list>
+    </div>
+    <div class="right">
+      <div class="columns">
+        <div class="first2">asdfasdf</div>
+        <div class="first3">asdfasdf</div>
+      </div>
+    </div>
+  </div>
+</div>

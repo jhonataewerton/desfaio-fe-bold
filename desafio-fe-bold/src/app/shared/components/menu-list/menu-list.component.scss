@@ -1,0 +1,54 @@
+@import "src/app/variables.scss";
+
+ul {
+  margin: 0px;
+  padding: 0px;
+}
+
+li {
+  display: flex;
+  position: relative;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  color: #{$color-neutral};
+  font-family: #{$font-family-base};
+  font-size: #{$font-size-base};
+  font-weight: #{$font-weight-normal};
+  line-height: 17.5px;
+  list-style-type: none;
+  margin-bottom: 16px;
+  margin-top: 40px;
+  cursor: pointer;;
+}
+
+li:after {
+  position: absolute;
+  content: "";
+  border-bottom: 1px solid #BDBDBD;
+  width: 100%;
+  transform: translateX(-50%);
+  left: 50%;
+  margin-top: 60px;
+}
+
+li:hover, li:active, li.selected {
+  color: #{$color-primary};
+
+  .icon-arrow {
+    background-color: #{$color-primary};
+  }
+}
+
+.text-and-icon {
+  display: flex;
+  align-items: center;
+}
+
+
+.icon-arrow {
+  background-color: #{$color-neutral};
+  width: 30px;
+  height: 24px;
+  mask-repeat: no-repeat;
+}
