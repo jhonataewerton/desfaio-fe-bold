@@ -6,6 +6,7 @@
       secondSvgUrl=""
     ></app-menu-list>
   </div>
+
   <div class="content">
     <div class="left">
       <div class="top-menu">
@@ -21,13 +22,27 @@
       >
       </app-menu-list>
     </div>
+
     <div class="right">
       <div class="columns">
-        <div class="first2"></div>
+        <div class="right-bottom">
+          <img src="../../../assets/images/img teste.png" />
+        </div>
+
         <div class="card-list">
-          <app-card *ngFor="let card of mockCardContent" [mockCardContent]="card" style="margin: 20px"></app-card>
+          <hr />
+          <app-card
+            *ngFor="let card of mockCardContent"
+            [mockCardContent]="card"
+            style="margin: 20px"
+          ></app-card>
         </div>
       </div>
+
+      <app-button
+        [textContent]="'INCLUIR CONTRIBUIÇÃO'"
+        [class]="'btn btn-primary'"
+      ></app-button>
     </div>
   </div>
 </div>

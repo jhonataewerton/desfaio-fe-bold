@@ -21,7 +21,6 @@ li,
   list-style-type: none;
   margin-bottom: 16px;
   margin-top: 40px;
-  cursor: pointer;
 }
 
 li:after {
@@ -50,6 +49,7 @@ li .tittle {
 
   .text-content {
     border-bottom: none !important;
+
   }
 }
 
@@ -60,4 +60,5 @@ li .tittle {
   font-weight: #{$font-weight-bold};
   text-transform: uppercase;
   cursor: pointer;
+  margin-left: 69px;
 }

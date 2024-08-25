@@ -1,4 +1,3 @@
-import { MatInputModule } from '@angular/material/input';
 import { ButtonComponent } from './components/button/button.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
@@ -8,10 +7,17 @@ import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { MenuListComponent } from './components/menu-list/menu-list.component';
 import { CardComponent } from './components/card/card.component';
+import { ToolbarComponent } from './components/toolbar/toolbar.component';
+
+import {MatToolbarModule} from '@angular/material/toolbar';
+import { MatInputModule } from '@angular/material/input';
+import {MatIconModule} from '@angular/material/icon';
+import {MatButtonModule} from '@angular/material/button';
+
 
 @NgModule({
-  declarations: [ButtonComponent, InputComponent, MenuListComponent, CardComponent],
-  imports: [CommonModule, ReactiveFormsModule, FormsModule, MatInputModule, HttpClientModule],
-  exports: [ButtonComponent, InputComponent, MenuListComponent, CardComponent],
+  declarations: [ButtonComponent, InputComponent, MenuListComponent, CardComponent, ToolbarComponent],
+  imports: [CommonModule, ReactiveFormsModule, FormsModule, MatInputModule, HttpClientModule, MatToolbarModule, MatIconModule, MatButtonModule],
+  exports: [ButtonComponent, InputComponent, MenuListComponent, CardComponent, ToolbarComponent],
 })
 export class SharedModule {}
