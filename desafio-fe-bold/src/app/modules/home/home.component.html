@@ -1,18 +1,32 @@
 <div class="container">
-  <div class="navs">asdfasdfasdf</div>
+  <div class="navs">
+    <app-menu-list
+      firstSvgUrl="back-arrow"
+      menuName="MEU PLANO"
+      secondSvgUrl=""
+    ></app-menu-list>
+  </div>
   <div class="content">
     <div class="left">
+      <div class="top-menu">
+        <img src="./../../../assets/images/perfil.png" width="45px" />
+        <span class="tittle">Meu Plano</span>
+        <span class="tittle-sub">O que você quer fazer?</span>
+      </div>
       <app-menu-list
         *ngFor="let menu of mockMenu"
         firstSvgUrl="{{ menu.firstSvgUrl }}"
         menuName="{{ menu.textContent }}"
+        secondSvgUrl="arrow"
       >
       </app-menu-list>
     </div>
     <div class="right">
       <div class="columns">
-        <div class="first2">asdfasdf</div>
-        <div class="first3">asdfasdf</div>
+        <div class="first2"></div>
+        <div class="card-list">
+          <app-card *ngFor="let card of mockCardContent" [mockCardContent]="card" style="margin: 20px"></app-card>
+        </div>
       </div>
     </div>
   </div>

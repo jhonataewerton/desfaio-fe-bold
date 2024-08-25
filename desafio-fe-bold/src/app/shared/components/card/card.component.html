@@ -1,0 +1,22 @@
+<div class="card">
+  <li style="margin: 5px;">
+    <div class="text-and-icon">
+      <img src="./../../../../../assets/images/menu-list/coin.svg" />
+      <span style="margin-left: 8px">{{ mockCardContent.textContent }}</span>
+    </div>
+    <img src="./../../../../../assets/images/menu-list/arrow-p.svg" />
+  </li>
+
+  <div
+    *ngFor="let content of mockCardContent.cardContent"
+    class="text-content"
+    style="margin: 0px"
+  >
+    <span style="margin-top: 20px">{{ content.textDescription }}</span>
+    <span style="margin-top: 20px">{{ content.value }}</span>
+  </div>
+
+  <div style="margin-top: 20px">
+    <span class="alt-cont"> Alternar Contribuição </span>
+  </div>
+</div>

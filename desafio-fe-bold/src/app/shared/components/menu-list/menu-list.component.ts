@@ -6,8 +6,8 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./menu-list.component.scss']
 })
 export class MenuListComponent {
-  @Input() firstSvgUrl = 'money';
+  @Input() firstSvgUrl = '';
+  @Input() secondSvgUrl = '';
   @Input() menuName = '';
-  secondSvgUrl = 'arrow';
 
 }

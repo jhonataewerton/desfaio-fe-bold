@@ -1,11 +1,13 @@
 @import "src/app/variables.scss";
-
-ul {
-  margin: 0px;
-  padding: 0px;
+.card {
+  border: 1px solid #bdbdbd;
+  border-radius: 10px;
+  background-color: white;
+  padding: 16px 16px;
 }
 
-li {
+li,
+.text-content {
   display: flex;
   position: relative;
   width: 100%;
@@ -19,36 +21,43 @@ li {
   list-style-type: none;
   margin-bottom: 16px;
   margin-top: 40px;
-  cursor: pointer;;
+  cursor: pointer;
 }
 
 li:after {
   position: absolute;
   content: "";
-  border-bottom: 1px solid #BDBDBD;
+  border-bottom: 1px solid #bdbdbd;
   width: 100%;
   transform: translateX(-50%);
   left: 50%;
   margin-top: 60px;
 }
 
-li:hover, li:active, li.selected {
-  color: #{$color-primary};
-
-  .icon-arrow {
-    background-color: #{$color-primary};
-  }
+li .tittle {
+  border-bottom: none; /* Remove a borda inferior do elemento com a classe .tittle */
 }
-
-.text-and-icon {
-  display: flex;
-  align-items: center;
-}
-
 
 .icon-arrow {
   background-color: #{$color-neutral};
   width: 24px;
   height: 24px;
   mask-repeat: no-repeat;
+
+  &-primary {
+    background-color: #{$color-primary};
+  }
+
+  .text-content {
+    border-bottom: none !important;
+  }
+}
+
+.alt-cont {
+  font-family: #{$font-family-base};
+  font-size: #{$font-size-base};
+  color: #{$color-primary};
+  font-weight: #{$font-weight-bold};
+  text-transform: uppercase;
+  cursor: pointer;
 }
