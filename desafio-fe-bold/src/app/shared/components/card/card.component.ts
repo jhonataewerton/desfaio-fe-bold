@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Card } from './card.model';
 
 @Component({
@@ -7,5 +7,6 @@ import { Card } from './card.model';
   styleUrls: ['./card.component.scss'],
 })
 export class CardComponent {
-  @Input() mockCardContent!: Card;
+  @Input()
+  mockCardContent: Card = new Card();
 }
